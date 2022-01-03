@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "algolia",
+    "algolia/react",
+    "algolia/typescript",
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": ["unused-imports"],
+  "globals": { "React": true, "JSX": true },
+  "rules": {
+    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": "error",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["accu"]
+      }
+    ]
+  }
+}

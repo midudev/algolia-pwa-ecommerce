@@ -1,0 +1,105 @@
+@layer utilities {
+  /* ---------- Common */
+  .btn {
+    @apply btn-bold px-8 rounded-sm flex items-center justify-center gap-3 transition-colors;
+
+    &:focus-visible {
+      @apply outline-none ring-2 ring-uranus-base;
+    }
+
+    &:disabled {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  .btn-native {
+    @apply can-hover:transition-colors can-hover:hover:text-neutral-dark disabled:cursor-not-allowed;
+  }
+
+  .btn--selected {
+    @apply bg-brand-black text-white;
+  }
+
+  /* ---------- Types */
+
+  /* Primary */
+  .btn-primary,
+  .btn-item {
+    @apply bg-brand-black text-white;
+
+    &:hover {
+      @apply can-hover:bg-neutral-darkest;
+    }
+
+    &:active {
+      @apply bg-brand-black;
+    }
+
+    &:disabled {
+      @apply bg-neutral-light text-neutral-dark;
+    }
+  }
+
+  /* Secondary/item */
+  .btn-secondary {
+    @apply bg-white border border-brand-black text-brand-black;
+
+    &:hover {
+      @apply can-hover:border-neutral-darkest can-hover:text-neutral-darkest;
+    }
+
+    &:active {
+      @apply bg-neutral-lightest border-brand-black text-brand-black;
+    }
+
+    &:disabled {
+      @apply bg-neutral-lightest border-neutral-light text-neutral-dark;
+    }
+  }
+
+  /* Tertiary */
+  .btn-tertiary {
+    @apply bg-brand-nebula text-white;
+
+    &:hover {
+      @apply can-hover:bg-nebula-dark can-hover:text-nebula-lightest;
+    }
+
+    &:active {
+      @apply bg-nebula-darkest text-nebula-lightest;
+    }
+
+    &:disabled {
+      @apply bg-neutral-light text-neutral-dark;
+    }
+  }
+
+  /* Item */
+  .btn-item {
+    @apply px-3.5 border bg-white border-brand-black text-brand-black;
+
+    &:hover {
+      @apply can-hover:text-white;
+    }
+
+    &:disabled {
+      @apply bg-neutral-lightest border-neutral-light text-neutral-dark;
+    }
+
+    &.btn-selected {
+      @apply btn--selected;
+    }
+  }
+
+  /* ---------- Sizes */
+
+  /* Small */
+  .btn-small {
+    @apply py-2;
+  }
+
+  /* Large */
+  .btn-large {
+    @apply py-3;
+  }
+}

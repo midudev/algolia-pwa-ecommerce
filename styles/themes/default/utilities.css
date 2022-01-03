@@ -1,0 +1,133 @@
+@layer utilities {
+  /* ========== Text utilities */
+
+  /* ---------- Heading */
+  .heading-1,
+  .heading-2,
+  .heading-4,
+  .heading-5 {
+    @apply font-bold;
+  }
+
+  .heading-1 {
+    @apply text-5xl tracking-[-0.02em];
+  }
+
+  .heading-2 {
+    @apply text-[2.5rem] leading-[1.2] tracking-[-0.02em];
+  }
+
+  .heading-3 {
+    @apply text-[2rem] leading-[1.1] tracking-[2px] font-semibold;
+  }
+
+  .heading-4 {
+    @apply text-[1.5rem] leading-[1.1];
+  }
+
+  .heading-5 {
+    @apply text-[1.25rem] leading-[1.4];
+  }
+
+  .subhead {
+    @apply text-xl leading-[1.4] font-bold;
+  }
+
+  /* ---------- Body */
+  .body-regular {
+    @apply font-sans text-sm;
+  }
+
+  .body-bold {
+    @apply body-regular font-bold;
+  }
+
+  /* ---------- Tag */
+  .tag-regular {
+    @apply text-xs uppercase;
+  }
+
+  .tag-bold {
+    @apply tag-regular font-bold;
+  }
+
+  /* ---------- Label */
+  .label-regular {
+    @apply text-xs;
+  }
+
+  .label-semibold {
+    @apply text-sm font-semibold uppercase;
+  }
+
+  .label-uppercase {
+    @apply label-regular uppercase;
+  }
+
+  /* ---------- Small */
+  .small-regular {
+    @apply text-xs;
+  }
+
+  .small-bold {
+    @apply small-regular font-bold;
+  }
+
+  .small-uppercase {
+    @apply small-regular uppercase;
+  }
+
+  /* ---------- Button */
+  .btn-bold {
+    @apply text-sm leading-[1.4] tracking-wider font-semibold;
+  }
+
+  /* ---------- Highlighting */
+  .highlighting {
+    @apply font-bold bg-transparent not-italic;
+  }
+
+  /* ========== Layout utilities */
+  .full-size {
+    @apply w-full h-full;
+  }
+
+  .h-container {
+    height: calc(100vh - theme("spacing.header"));
+  }
+
+  /* ========== Transition utilities */
+  .to-visible {
+    @apply opacity-100 visible;
+
+    transition:
+      opacity theme("transitionDuration.DEFAULT") linear 0s,
+      visibility 0s linear 0s;
+  }
+
+  .to-invisible {
+    @apply opacity-0 invisible;
+
+    transition:
+      opacity theme("transitionDuration.DEFAULT") linear 0s,
+      visibility 0s linear theme("transitionDuration.DEFAULT");
+  }
+
+  /* ========== Text shadow utilities */
+  .text-shadow-small {
+    text-shadow: theme("boxShadow.small");
+  }
+
+  .text-shadow-medium {
+    text-shadow: theme("boxShadow.medium");
+  }
+
+  .text-shadow-large {
+    text-shadow: theme("boxShadow.large");
+  }
+
+  /* ========== Misc utilities */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}

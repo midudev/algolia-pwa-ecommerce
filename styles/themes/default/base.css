@@ -1,0 +1,75 @@
+@layer base {
+  :root {
+    /* ========== Color styles */
+
+    /* ---------- Brand */
+    --color-brand-nebula: #5468ff;
+    --color-brand-black: #23263b;
+
+    /* ---------- Neutral */
+    --color-neutral-lightest: #f4f4f5;
+    --color-neutral-light: #d3d4d8;
+    --color-neutral-dark: #91929d;
+    --color-neutral-darkest: #4f5162;
+
+    /* ---------- Uranus */
+    --color-uranus-base: #89d9d3;
+
+    /* ---------- Venus */
+    --color-venus-base: #aa086c;
+
+    /* ---------- Nebula */
+    --color-nebula-lightest: #e8eaff;
+    --color-nebula-light: #7884de;
+    --color-nebula-dark: #3f52e8;
+    --color-nebula-darkest: #1e2b8e;
+
+    /* ========== Autocomplete */
+    --aa-detached-modal-media-query: ();
+  }
+
+  ::selection {
+    @apply bg-brand-black text-white;
+  }
+
+  #__next {
+    @apply flex flex-col min-h-screen;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply body-regular text-brand-black;
+  }
+
+  h1 {
+    @apply heading-1;
+  }
+
+  h2 {
+    @apply heading-2;
+  }
+
+  h3 {
+    @apply heading-3;
+  }
+
+  h4 {
+    @apply heading-4;
+  }
+
+  h5 {
+    @apply heading-5;
+  }
+
+  mark,
+  em {
+    @apply highlighting;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+}

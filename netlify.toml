@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = ".next" 
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
+
+  [[plugins.inputs.audits]]
+    path = "./"
